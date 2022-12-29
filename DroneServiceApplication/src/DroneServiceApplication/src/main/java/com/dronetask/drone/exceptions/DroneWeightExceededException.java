@@ -1,7 +1,9 @@
 package com.dronetask.drone.exceptions;
 
-public class DroneWeightExceededException extends RuntimeException {
-    public DroneWeightExceededException() {
-        super("Drone Weight Limit Exceeded");
+import com.dronetask.drone.Drone;
+
+public class DroneWeightExceededException extends DroneException {
+    public DroneWeightExceededException(Drone drone) {
+        super("Drone Weight Limit of "+drone.getWeightLimit()+" is Exceeded ");
     }
 }

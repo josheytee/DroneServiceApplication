@@ -53,29 +53,33 @@ public class DroneService implements DroneServiceInterface {
                 .orElseThrow(() -> new DroneNotFoundException("Drone with Serial Number: " + droneRequest.getSerialNumber() + " does not exist"));
 
         if (drone.getBatteryLevel() < 25) throw new DroneLowBatteryException();
-        if (droneRequest.getMedicationCodes().isEmpty() && droneRequest.getMedications().isEmpty())
+        if ((droneRequest.getMedicationCodes() == null || droneRequest.getMedicationCodes().isEmpty())
+                && (droneRequest.getMedications() == null || droneRequest.getMedications().isEmpty()))
             throw new RuntimeException("Medications are required to load a drone");
         drone.setDroneState(DroneState.LOADING);
         droneRepository.updateDroneState(droneRequest.getSerialNumber(), DroneState.LOADING);
 
         List<Medication> medications = new ArrayList<>();
         double weightTotal = 0.0;
-        for (Medication medication : droneRequest.getMedications()) {
-            medication.setDrone(drone);
-            weightTotal += medication.getWeight();
-            medications.add(medication);
-//            medicationRepository.save(medication);
+        if (!droneRequest.getMedications().isEmpty()) {
+            for (Medication medication : droneRequest.getMedications()) {
+                medication.setDrone(drone);
+                weightTotal += medication.getWeight();
+                medications.add(medication);
+            }
         }
-
-        for (String medicationCode : droneRequest.getMedicationCodes()) {
-            Medication medicationByCode = medicationRepository.findMedicationByCode(medicationCode)
-                    .orElseThrow(() -> new MedicationNotFoundException(medicationCode));
-            medicationByCode.setDrone(drone);
-            weightTotal += medicationByCode.getWeight();
-            medications.add(medicationByCode);
-//            medicationRepository.save(medicationByCode);
+        if (droneRequest.getMedicationCodes() != null) {
+            if (!droneRequest.getMedicationCodes().isEmpty()) {
+                for (String medicationCode : droneRequest.getMedicationCodes()) {
+                    Medication medicationByCode = medicationRepository.findMedicationByCode(medicationCode)
+                            .orElseThrow(() -> new MedicationNotFoundException(medicationCode));
+                    medicationByCode.setDrone(drone);
+                    weightTotal += medicationByCode.getWeight();
+                    medications.add(medicationByCode);
+                }
+            }
         }
-        if (weightTotal > drone.getWeightLimit()) throw new DroneWeightExceededException();
+        if (weightTotal > drone.getWeightLimit()) throw new DroneWeightExceededException(drone);
 
         drone.setDroneState(DroneState.LOADED);
         droneRepository.updateDroneState(droneRequest.getSerialNumber(), DroneState.LOADED);
@@ -111,6 +115,6 @@ public class DroneService implements DroneServiceInterface {
         Drone droneBySerialNumber = droneRepository.findDroneBySerialNumber(serialNumber)
                 .orElseThrow(() -> new DroneNotFoundException(serialNumber));
         return new DroneResponse(200, "Battery level for drone:" + serialNumber + " Loaded successfully in %",
-               droneBySerialNumber.getBatteryLevel());
+                droneBySerialNumber.getBatteryLevel());
     }
 }

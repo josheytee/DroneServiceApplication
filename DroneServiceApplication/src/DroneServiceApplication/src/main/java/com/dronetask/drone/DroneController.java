@@ -43,7 +43,7 @@ public class DroneController {
      * @throws com.dronetask.drone.exceptions.DroneWeightExceededException, {@link com.dronetask.drone.exceptions.DroneLowBatteryException}
      */
     @PostMapping(path = "/load")
-    public ResponseEntity<LoadDroneResponse> loadDrone(@Valid @NotNull @RequestBody LoadDroneRequest droneRequest) {
+    public ResponseEntity<LoadDroneResponse> loadDrone(@Valid @RequestBody LoadDroneRequest droneRequest) {
         LoadDroneResponse loadDroneResponse = droneService.loadDrone(droneRequest);
         return new ResponseEntity<LoadDroneResponse>(loadDroneResponse, HttpStatus.OK);
     }

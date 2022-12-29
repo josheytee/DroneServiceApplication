@@ -2,10 +2,9 @@ package com.dronetask.medication;
 
 import com.dronetask.drone.Drone;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "medications")
@@ -21,12 +20,14 @@ public class Medication {
     private Drone drone;
 
     //    name (allowed only letters, numbers, ‘-‘, ‘_’);
+    @Pattern(regexp = "[a-zA-Z0-9-_]*", message = "Only letters,numbers dash and underscore are allowed for Medication name")
     private String name;
 
     //    weight;
     private Double weight;
 
     //    code (allowed only upper case letters, underscore and numbers)
+    @Pattern(regexp = "[A-Z0-9_]*", message = "Only upper case letters, underscore and numbers are allowed for Medication Code")
     private String code;
 
     public Medication(Long id, String name, Double weight, String code, String image_url, Drone drone) {

@@ -12,7 +12,7 @@ public class MedicationConfig {
     @Bean
     CommandLineRunner mcommandLineRunner(MedicationRepository repository) {
         return args -> {
-            Medication m1 = new Medication( "paracetamol", 29.0, "mapp1", "thant imaeg", null);
+            Medication m1 = new Medication( "paracetamol", 29.0, "ICU14", "thant imaeg", null);
 
             repository.saveAll(
                     List.of(m1)
