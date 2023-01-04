@@ -1,5 +1,6 @@
 package com.dronetask.drone;
 
+import com.dronetask.drone.exceptions.DroneDuplicateException;
 import com.dronetask.drone.exceptions.DroneLowBatteryException;
 import com.dronetask.drone.exceptions.DroneNotFoundException;
 import com.dronetask.drone.exceptions.DroneWeightExceededException;
@@ -35,7 +36,7 @@ public class DroneService implements DroneServiceInterface {
         Drone newDrone = registerDroneRequest.getDrone();
         Optional<Drone> existingDrone = droneRepository.findDroneBySerialNumber(newDrone.getSerialNumber());
         if (existingDrone.isPresent()) {
-            throw new RuntimeException("Drone with serial number: " + newDrone.getSerialNumber() + " already exist, \n You can load it instead");
+            throw new DroneDuplicateException( newDrone.getSerialNumber() );
         }
         droneRepository.save(newDrone);
 
