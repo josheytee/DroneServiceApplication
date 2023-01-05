@@ -15,7 +15,6 @@ import com.dronetask.medication.MedicationRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +41,7 @@ public class DroneService implements DroneServiceInterface {
 
         RegisterDroneResponse droneResponse = new RegisterDroneResponse();
         droneResponse.setMessage("Drone Successfully Registered1");
-        droneResponse.setStatus(200);
+        droneResponse.setStatus(201);
         droneResponse.setData(newDrone);
         return droneResponse;
     }
@@ -57,6 +56,9 @@ public class DroneService implements DroneServiceInterface {
         if ((droneRequest.getMedicationCodes() == null || droneRequest.getMedicationCodes().isEmpty())
                 && (droneRequest.getMedications() == null || droneRequest.getMedications().isEmpty()))
             throw new RuntimeException("Medications are required to load a drone");
+        if (drone.getDroneState().ordinal() > DroneState.LOADED.ordinal()){
+            throw new RuntimeException("Drone is currently not available for Loading");
+        }
         drone.setDroneState(DroneState.LOADING);
         droneRepository.updateDroneState(droneRequest.getSerialNumber(), DroneState.LOADING);
 

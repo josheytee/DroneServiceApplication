@@ -1,10 +1,10 @@
 package com.dronetask.drone.requests;
 
 import com.dronetask.medication.Medication;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -13,10 +13,13 @@ public class LoadDroneRequest {
     @NotNull
     private String serialNumber;
 
-//    @JsonProperty
     private List<Medication> medications;
     private List<String> medicationCodes;
 
+    public LoadDroneRequest() {
+        medications = new ArrayList<>();
+        medicationCodes = new ArrayList<>();
+    }
 
     public String getSerialNumber() {
         return serialNumber;
@@ -36,6 +39,10 @@ public class LoadDroneRequest {
 
     public List<String> getMedicationCodes() {
         return medicationCodes;
+    }
+
+    public void addMedication(Medication medication) {
+        this.medications.add(medication);
     }
 
     public void setMedicationCodes(List<String> medicationCodes) {

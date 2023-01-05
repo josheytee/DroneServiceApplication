@@ -25,7 +25,7 @@ public class DroneServiceApplication {
         SpringApplication.run(DroneServiceApplication.class, args);
     }
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 30*60*1000)
     public void scheduleFixedRateTaskAsync() throws InterruptedException {
 
         List<Drone> droneList = droneRepository.findAll();
