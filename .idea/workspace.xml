@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0940aac-d976-41d0-8389-b5303e76a53c" name="Changes" comment="fix project structure">
+      <change afterPath="$PROJECT_DIR$/.idea/oluwatobiloba-agbeja.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/DroneServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/Drone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/DroneState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/exceptions/DroneDuplicateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/exceptions/DroneException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/exceptions/DroneLowBatteryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/exceptions/DroneNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/exceptions/DroneWeightExceededException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/requests/LoadDroneRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/requests/RegisterDroneRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/AvailableDronesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/CheckDronesBatteryLevelResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/CheckMedicationItemsByDroneResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/DroneErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/DroneResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/LoadDroneResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/drone/responses/RegisterDroneResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/medication/Medication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/medication/MedicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/medication/MedicationNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/java/com/dronetask/medication/MedicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/test/java/com/dronetask/DroneServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/test/java/com/dronetask/drone/DroneRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DroneServiceApplication/src/test/java/com/dronetask/drone/DroneServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Kc3jgNQ016ShYyNssVjS7sTRou" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/macpro/Web Projects/freelance/musala/oluwatobiloba-agbeja",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.DroneServiceTest">
+    <configuration name="DroneServiceApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.dronetask.DroneServiceApplication" />
+      <module name="DroneServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DroneServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DroneServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dronetask.drone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dronetask.drone" />
+      <option name="MAIN_CLASS_NAME" value="com.dronetask.drone.DroneServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DroneServiceApplication" />
+      <item itemvalue="JUnit.DroneServiceTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DroneServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0940aac-d976-41d0-8389-b5303e76a53c" name="Changes" comment="" />
+      <created>1674260180968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674260180968</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fix project structure">
+      <created>1674260408300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674260408300</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix project structure" />
+  </component>
+</project>
