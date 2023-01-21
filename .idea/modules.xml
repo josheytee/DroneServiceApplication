@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DroneServiceApplication/src/DroneServiceApplication/DroneServiceApplication.iml" filepath="$PROJECT_DIR$/DroneServiceApplication/src/DroneServiceApplication/DroneServiceApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DroneServiceApplication/DroneServiceApplication.iml" filepath="$PROJECT_DIR$/DroneServiceApplication/DroneServiceApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/oluwatobiloba-agbeja.iml" filepath="$PROJECT_DIR$/.idea/oluwatobiloba-agbeja.iml" />
     </modules>
   </component>
 </project>

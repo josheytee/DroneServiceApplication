@@ -3,9 +3,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/DroneServiceApplication/src/main/pom.xml" />
-        <option value="$PROJECT_DIR$/DroneServiceApplication/src/DroneServiceAppliction/pom.xml" />
-        <option value="$PROJECT_DIR$/DroneServiceApplication/src/DroneServiceApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/DroneServiceApplication/pom.xml" />
       </list>
     </option>
   </component>
