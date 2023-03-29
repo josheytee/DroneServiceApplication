@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "spring-boot",
+            "name": "DroneServiceApplication",
+            "mainClass": "$PROJECT_DIR$/src/main/java/com/dronetask/DroneServiceApplication.java",
+            "module": "",
+        },
+
+    ]
+}
